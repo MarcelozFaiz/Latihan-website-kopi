@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak - Kopi Nusantara</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/kopi.webp" alt="Logo UMKM" width="40" height="40" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <h2>Hubungi Kami</h2>
+        <p>Silahkan isi formulir berikut untuk menghubungi tim Kopi Nusantara:</p>
+
+        <form id="formKontak">
+            <label for="nama">Nama:</label><br>
+            <input type="text" id="nama" name="nama" />
+            <span class="error" id="errorNama"></span><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" />
+            <span class="error" id="errorEmail"></span><br><br>
+
+            <label for="gender">Jenis Kelamin:</label><br>
+            <input type="radio" name="gender" value="Pria"> Pria
+            <input type="radio" name="gender" value="Wanita"> Wanita
+            <br>
+            <span class="error" id="errorGender"></span><br><br>
+
+            <label for="tanggal">Tanggal Pemesanan:</label><br>
+            <input type="date" id="tanggal" name="tanggal">
+            <br>
+            <span class="error" id="errorTanggal"></span><br><br>
+
+            <label for="kategori">Kategori Pesan:</label><br>
+            <select id="kategori" name="kategori">
+                <option value="">--Pilih Kategori--</option>
+                <option value="umum">Umum</option>
+                <option value="produk">Produk</option>
+                <option value="kerjasama">Kerja Sama</option>
+            </select>
+            <span class="error" id="errorKategori"></span><br><br>
+
+            <label for="pesan">Pesan:</label><br>
+            <textarea id="pesan" name="pesan" rows="5" cols="30"></textarea>
+            <span class="error" id="errorPesan"></span><br><br>
+
+            <input type="checkbox" id="langganan" name="langganan" value="ya">
+            <label for="langganan">Saya ingin menerima newsletter</label><br><br>
+
+            <button type="submit">Kirim</button>
+            <p id="errorMsg" style="color:red;"></p>
+        </form>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Kopi Nusantara</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="module" src="javascript/form.js"></script>
+    <script type="module" src="javascript/newsletter.js"></script>
+
+    <!-- LINK CDN Bootstrap -->
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- LINK CDN JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>

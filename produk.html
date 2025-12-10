@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Produk- Kopi Nusantara</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Kopi Nusantara</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="images/kopi.webp" alt="Logo UMKM" width="40" height="40" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs- toggle="collapse" data-bs-target="#navbarNav">
+
+<span class="navbar-toggler-icon"></span>
+</button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+                        <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+                        <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h2>Produk Unggulan Kami</h2>
+        <p>Berikut daftar produk kopi Nusantara yang kami sediakan:</p>
+
+        <table border="1" cellspacing="0" cellpadding="8">
+            <thead>
+                <tr>
+                    <th>Produk</th>
+                    <th>Ukuran</th>
+                    <th>Harga</th>
+                    <th>Jenis Kopi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kopi Arabika Gayo</td>
+                    <td>250g</td>
+                    <td>Rp 45.000</td>
+                    <td rowspan="2">Arabika</td>
+                </tr>
+                <tr>
+                    <td>Kopi Arabika Petungkriyono</td>
+                    <td>300g</td>
+                    <td>Rp 48.500</td>
+                </tr>
+                <tr>
+                    <td>Kopi Robusta Batang</td>
+                    <td>250g</td>
+                    <td>Rp 46.000</td>
+                    <td rowspan="3">Robusta</td>
+                </tr>
+                <tr>
+                    <td>Kopi Robusta Temanggung</td>
+                    <td>250g</td>
+                    <td>Rp 38.000</td>
+                </tr>
+                <tr>
+                    <td>Kopi Robusta Linggoasri</td>
+                    <td>225g</td>
+                    <td>Rp 35.000</td>
+                </tr>
+                <tr>
+                    <td>Kopi Liberika Riau</td>
+                    <td>250g</td>
+                    <td>Rp 42.000</td>
+                    <td>Liberika</td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align: center; background-color:#eeeeee;">
+                        Semua harga sudah termasuk PPN
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="container my-5">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/gayo.jpg" class="card-img-top" alt="Produk 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Produk 1</h5>
+                            <p class="card-text">Deskripsi singkat produk.</p>
+
+                            <a href="#" class="btn btn-primary">Beli Sekarang</a>
+                        </div>
+
+                    </div>
+
+
+                    <h3>Dengarkan Cerita Kami</h3>
+                    <audio controls>
+            <source src="audio/cerita-kopi.mp3" type="audio/mpeg">
+            Audio tidak tersedia di browser Anda.
+        </audio>
+
+                    <h3>Layanan Unggulan:</h3>
+                    <ul id="layanan-list"></ul>
+
+                    <h3>Form Pemesanan</h3>
+                    <form onsubmit="return cekForm()">
+                        <input type="text" id="namaProduk" placeholder="Nama Produk"><br>
+                        <input type="number" id="jumlah" placeholder="Jumlah"><br><br>
+
+                        <button type="submit"> Pesan </button>
+                    </form>
+
+                    <section class="kalkulator-belanja">
+                        <h3>Kalkulator Belanja Cepat</h3>
+                        <form id="hitungBelanjaForm">
+                            <label for="harga-produk">Harga Produk (Rp):</label>
+                            <input type="number" id="harga-produk" value="35000" min="1" required><br><br>
+
+                            <label for="jumlah-beli">Jumlah Beli:</label>
+                            <input type="number" id="jumlah-beli" value="1" min="1" required><br><br>
+
+                            <button type="submit">Hitung Total</button>
+                            <p>Total Belanja Anda: <strong id="hasilTotalBelanja">Rp 0</strong></p>
+                        </form>
+                    </section>
+
+                    <hr>
+
+                    <section class="kategori-usia">
+                        <h3>Cek Kategori Pengunjung</h3>
+                        <label for="input-usia">Masukkan Usia Anda:</label>
+                        <input type="number" id="input-usia" min="1" max="120" placeholder="Contoh: 25">
+                        <p>Kategori Anda: <strong id="status-kategori">Tekan Enter setelah mengisi usia</strong></p>
+                    </section>
+
+                    <hr>
+
+                    <section class="testimoni-dinamis">
+                        <h3>Testimoni Pelanggan (Dinamis)</h3>
+                        <div id="testimoni-list" class="testimoni-container">
+                            <p>Memuat testimoni...</p>
+                        </div>
+                    </section>
+
+                    <h3>Daftar Wishlist Produk</h3>
+                    <form>
+                        <input type="text" id="produkInput" placeholder="Nama produk..." />
+                        <p>Preview: <span id="previewProduk"></span></p>
+                        <button id="tambahBtn">Tambah Produk</button>
+                    </form>
+
+                    <ul id="daftarProduk"></ul>
+                    <hr />
+
+                    <label for="temaSelect">Pilih Tema Warna: </label>
+                    <select id="temaSelect">
+            <option value="white">Putih</option>
+            <option value="lightblue">Biru Muda</option>
+            <option value="lightyellow">Kuning Muda</option>
+        </select>
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Kopi Nusantara</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
