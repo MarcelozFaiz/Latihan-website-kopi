@@ -1,2 +1,2 @@
 # Website Kopi
-Website ini merupakan website profil darI UMKM Kopi
+Website ini merupakan website profil dari UMKM Kopi
